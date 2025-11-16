@@ -3,11 +3,11 @@ services:
   ping-server:
     build: .
     ports:
-      - "5001:5001"
+      - "8888:8888"
     environment:
-      - BASIC_AUTH_ENABLED=false
-      - BASIC_AUTH_USER=admin
-      - BASIC_AUTH_PASS=Secr3t@123
+      - BASIC_AUTH_ENABLED=$BASIC_AUTH_ENABLED
+      - BASIC_AUTH_USER=$BASIC_AUTH_USER
+      - BASIC_AUTH_PASS=$BASIC_AUTH_PASS
     cap_add:
       - NET_RAW
       - NET_ADMIN
